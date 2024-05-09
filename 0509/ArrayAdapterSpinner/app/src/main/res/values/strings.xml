@@ -1,0 +1,8 @@
+<resources>
+    <string-array name="drinkname">
+        <item >珍珠奶茶</item>
+        <item >波霸奶茶</item>
+        <item >仙草凍奶茶</item>
+        <item >檸檬汁</item>
+    </string-array>
+</resources>
