@@ -12,11 +12,11 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity
-        implements DialogInterface.OnClickListener {
+        implements DialogInterface.OnClickListener,DialogInterface.OnMultiChoiceClickListener{
 
 
     private static String[] items = {"Samsung","OPPO","Apple","ASUS"};
-    private static boolean[] itemsChecked = {false,true,false,true};
+    private  boolean[] itemsChecked = {false,false,false,false};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,9 +29,9 @@ public class MainActivity extends AppCompatActivity
             public void onClick(View v) {
                 AlertDialog build = new AlertDialog.Builder(MainActivity.this)
                         .setTitle("請勾選選項")
-                        .setPositiveButton("確定",null)
-                        .setNegativeButton("取消",null)
-                        .setMultiChoiceItems(items,itemsChecked,null)
+                        .setPositiveButton("確定",MainActivity.this)
+                        .setNegativeButton("取消",MainActivity.this)
+                        .setMultiChoiceItems(items,itemsChecked,MainActivity.this)
                         .show();
             }
         });
@@ -53,5 +53,13 @@ public class MainActivity extends AppCompatActivity
                 Toast.makeText(this,"按下取消鍵",Toast.LENGTH_SHORT).show();
                 break;
         }
+    }
+
+
+    @Override
+    public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+        Toast.makeText(MainActivity.this,
+                items[which] + (isChecked ? "勾選": "沒有勾選"),
+                Toast.LENGTH_SHORT).show();
     }
 }
