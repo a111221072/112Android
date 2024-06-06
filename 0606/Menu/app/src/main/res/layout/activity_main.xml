@@ -1,0 +1,122 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 主餐 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="主餐"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/main_course_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/main_course_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="漢堡"/>
+
+        <RadioButton
+            android:id="@+id/main_course_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="炸雞"/>
+
+        <RadioButton
+            android:id="@+id/main_course_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="沙拉"/>
+    </RadioGroup>
+
+    <!-- 飲料 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="飲料"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/drink_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/drink_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="可樂"/>
+
+        <RadioButton
+            android:id="@+id/drink_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="果汁"/>
+
+        <RadioButton
+            android:id="@+id/drink_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="茶"/>
+    </RadioGroup>
+
+    <!-- 附餐 -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="附餐"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <RadioGroup
+        android:id="@+id/side_dish_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/side_dish_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="薯條"/>
+
+        <RadioButton
+            android:id="@+id/side_dish_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="沙拉"/>
+
+        <RadioButton
+            android:id="@+id/side_dish_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="玉米"/>
+    </RadioGroup>
+
+    <!-- 確認按鈕 -->
+    <Button
+        android:id="@+id/confirm_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="確認訂單"
+        android:layout_marginTop="16dp"/>
+
+    <!-- 顯示訂單結果 -->
+    <TextView
+        android:id="@+id/order_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"/>
+</LinearLayout>

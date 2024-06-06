@@ -9,8 +9,8 @@ import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
 
-    private CheckBox chk1, chk2, chk3, chk4;
-    private ImageView output1, output2, output3, output4;
+    private CheckBox chk1, chk2, chk3, chk4,chk5;
+    private ImageView output1, output2, output3, output4,output5;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +21,13 @@ public class MainActivity extends AppCompatActivity {
         chk2 = findViewById(R.id.chk2);
         chk3 = findViewById(R.id.chk3);
         chk4 = findViewById(R.id.chk4);
+        chk5 = findViewById(R.id.chk5);
 
         output1 = findViewById(R.id.output1);
         output2 = findViewById(R.id.output2);
         output3 = findViewById(R.id.output3);
         output4 = findViewById(R.id.output4);
+        output5 = findViewById(R.id.output5);
 
         chk1.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
@@ -56,6 +58,13 @@ public class MainActivity extends AppCompatActivity {
                 output4.setVisibility(View.VISIBLE);
             } else {
                 output4.setVisibility(View.GONE);
+            }
+        });
+        chk5.setOnCheckedChangeListener((buttonView, isChecked) -> {
+            if (isChecked) {
+                output5.setVisibility(View.VISIBLE);
+            } else {
+                output5.setVisibility(View.GONE);
             }
         });
     }
